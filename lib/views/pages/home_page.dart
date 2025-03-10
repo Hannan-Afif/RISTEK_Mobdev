@@ -48,17 +48,9 @@ class _HomePageState extends State<HomePage> {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ValueListenableBuilder<String>(
-                  valueListenable: usernameNotifier,
-                  builder: (context, value, child) {
-                    return Text(
-                      'Welcome $value!',
-                      style: TextStyle(
-                        fontSize: 25.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    );
-                  },
+                Text(
+                  'Welcome Hannan!',
+                  style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
                 ),
                 Text(
                   'Have a nice day!',
@@ -71,27 +63,35 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: const EdgeInsets.all(7.0),
             child: TextField(
+
               controller: _controller,
-              decoration: const InputDecoration(border: OutlineInputBorder()),
+              maxLines: null,
+              keyboardType: TextInputType.multiline,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25.0),
+                )
+
+                ),
             ),
           ),
           Container(
             alignment: Alignment.topRight,
+            margin: EdgeInsets.only(
+              top: 4.0,
+              right:10.0,
+              bottom: 2.0,
+            ),
             padding: EdgeInsets.all(7.0),
             color: Colors.white,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFF5038BC), // Change to your desired color
-                foregroundColor: Colors.white, // Text/Icon color
+                backgroundColor: Color(0xFF5038BC),
+                foregroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                    10,
-                  ), // Optional: Adjust border radius
+                  borderRadius: BorderRadius.circular(10),
                 ),
-                padding: EdgeInsets.symmetric(
-                  horizontal: 20,
-                  vertical: 12,
-                ), // Adjust padding
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               ),
               onPressed: _addTask,
 
@@ -106,10 +106,12 @@ class _HomePageState extends State<HomePage> {
                   width: double.infinity,
                   margin: EdgeInsets.all(8.0), // Atur jarak kanan & kiri
                   decoration: BoxDecoration(
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(20.0),
                     border: Border.all(color: Color(0xFFE2E0F2), width: 1.0),
                   ),
                   child: ListTile(
+
                     trailing: IconButton(
                       icon: Icon(Icons.delete, color: Colors.red),
                       onPressed: () {
@@ -119,15 +121,12 @@ class _HomePageState extends State<HomePage> {
                     title: Text(
                       _tasks[index].task,
                       style: TextStyle(
-                        color: Color(0xFF5038BC),
-                        fontWeight: FontWeight.bold,
+                        color: _tasks[index].check ? Color(0xFF5038BC) : Color(0xFF494646),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 16,
                       ),
                     ),
                     dense: true,
-                    // subtitle: Text(
-                    //   'Deadline',
-                    //   style: TextStyle(color: Colors.amber),
-                    // ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),

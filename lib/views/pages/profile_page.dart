@@ -9,10 +9,10 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-  late TextEditingController _controllerName = TextEditingController();
-  late TextEditingController _controllerNickname = TextEditingController();
-  late TextEditingController _controllerHobbies = TextEditingController();
-  late TextEditingController _controllerSocialMedia = TextEditingController();
+  final TextEditingController _controllerName = TextEditingController(text: 'Hannan Afif Darmawan');
+  final TextEditingController _controllerNickname = TextEditingController(text: 'Hannan');
+  final TextEditingController _controllerHobbies = TextEditingController(text: 'Typing');
+  final TextEditingController _controllerSocialMedia = TextEditingController(text: '@hannanad03');
   File? _image;
 
   // Function to pick an image from the gallery
@@ -28,17 +28,17 @@ class _ProfilePageState extends State<ProfilePage> {
     }
   }
 
-  @override
-  void initState() {
-    super.initState();
-    _controllerName = TextEditingController(text: usernameNotifier.value);
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   _controllerName = TextEditingController(text: usernameNotifier.value);
+  // }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      appBar: AppBar(backgroundColor: Color(0xFF5038BC)),
+      appBar: AppBar(backgroundColor: Color(0xFF5038BC), elevation: 0,),
       backgroundColor: Color(0xFF5038BC),
       body: Container(
         height: double.infinity,
@@ -109,13 +109,11 @@ class _ProfilePageState extends State<ProfilePage> {
               }
             },
             controller: controller,
+            readOnly: true,
             decoration: InputDecoration(
-              enabledBorder:
-                  InputBorder.none, // Removes border when not focused
-              focusedBorder: InputBorder.none, // Removes border when focused
               contentPadding: EdgeInsets.symmetric(
                 horizontal: 10,
-                vertical: 12,
+                vertical: 11,
               ),
               // border: OutlineInputBorder(
               //   borderRadius: BorderRadius.all(Radius.circular(50)),

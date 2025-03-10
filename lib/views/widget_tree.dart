@@ -28,6 +28,8 @@ class _WidgetTreeState extends State<WidgetTree> {
           duration: Duration(milliseconds: 0),
           color: (home == 0) ? Colors.white : Color(0xFF5038BC),
           child: AppBar(
+            elevation: 0,
+            scrolledUnderElevation: 0,
             centerTitle: true,
             title: const Text(
               'My Profile',
