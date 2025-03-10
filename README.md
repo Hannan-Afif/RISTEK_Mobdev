@@ -1,7 +1,7 @@
 # To Do App
 
 A simple To-Do app built using Flutter. Manage your tasks efficiently
-with an elegant UI.
+with an elegant UI. Not Supporting a local database.
 
 ## Features
 - Add, edit, and delete tasks
