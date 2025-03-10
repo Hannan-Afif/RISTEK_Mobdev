@@ -1,16 +1,24 @@
-# flutter_application_1
+# To Do App
 
-A new Flutter project.
+A simple To-Do app built using Flutter. Manage your tasks efficiently
+with an elegant UI.
 
-## Getting Started
+## Features
+- Add, edit, and delete tasks
+- Support for checklist tasks
 
-This project is a starting point for a Flutter application.
+## Depemdencies
+- Image_picker: A package that allows user to pick images or videos from the gallery or camera
 
-A few resources to get you started if this is your first Flutter project:
+## Key Learnings
+- Widget: I learned that there's a lot of widgets which represent a different function
+- Widget inside Widget: I learned that there's countless creativity things that could be made with this method and need a lot of experience and practice to master it
+- Wrap: I learned that widget can be wrapped easily in vscode, using refactor
+- Layout Structure: I learned that in flutter there are 3 components that represent different section for each
+- ValueNotifier: This widget really useful in order to change or hold a variable in flutter, especially for a different file
+- Dependecy: Library that has a different special purpose, like Image_picker, Shared_preference, etc
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Reference
+- Chatbot: I used a lot of ChatGPT to help me solve, fix, or debug an error
+- Youtube: mostly from Flutter Mapp - (The Ultimate Flutter Tutorial for Beginners - 2025 Full Course)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
